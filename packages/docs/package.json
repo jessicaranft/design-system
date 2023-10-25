@@ -1,5 +1,5 @@
 {
-  "name": "@ignite-ui/docs",
+  "name": "@jessr-ignite-ui/docs",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -10,10 +10,10 @@
     "build": "storybook build && touch ./storybook-static/.nojekyll"
   },
   "dependencies": {
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/react": "*",
-    "@ignite-ui/tokens": "*",
-    "@ignite-ui/ts-config": "*",
+    "@jessr-ignite-ui/eslint-config": "*",
+    "@jessr-ignite-ui/react": "*",
+    "@jessr-ignite-ui/tokens": "*",
+    "@jessr-ignite-ui/ts-config": "*",
     "@storybook/addon-a11y": "^7.5.1",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
