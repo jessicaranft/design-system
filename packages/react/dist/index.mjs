@@ -515,6 +515,94 @@ function MultiStep({ size, currentStep = 1 }) {
   ] });
 }
 MultiStep.displayName = "MultiStep";
+
+// src/components/ToastMessage/index.tsx
+import * as Toast2 from "@radix-ui/react-toast";
+import { X } from "phosphor-react";
+
+// src/components/ToastMessage/styles.ts
+import * as Toast from "@radix-ui/react-toast";
+var ToastContainer = styled(Toast.Root, {
+  width: 360,
+  padding: "$3 $5",
+  borderRadius: 6,
+  border: "1px solid $gray600",
+  backgroundColor: "$gray800",
+  position: "relative",
+  listStyle: "none"
+});
+var Title2 = styled(Toast.Title, {
+  fontFamily: "$default",
+  fontSize: "$xl",
+  fontWeight: "bold",
+  color: "$white",
+  marginBottom: "$3"
+});
+var Description2 = styled(Toast.Description, {
+  fontFamily: "$default",
+  fontSize: "$sm",
+  color: "$gray200"
+});
+var Viewport2 = styled(Toast.Viewport, {
+  position: "fixed",
+  width: 360,
+  maxWidth: "100vw",
+  zIndex: 2147483647
+});
+var Close2 = styled(Toast.Close, {
+  border: 0,
+  background: "none",
+  color: "$gray200",
+  lineHeight: 0,
+  position: "absolute",
+  top: "$3",
+  right: "$3",
+  cursor: "pointer"
+});
+
+// src/components/ToastMessage/index.tsx
+import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
+function ToastMessage({ title, description }) {
+  return /* @__PURE__ */ jsxs4(Toast2.Provider, { duration: 5e9, children: [
+    /* @__PURE__ */ jsxs4(ToastContainer, { children: [
+      /* @__PURE__ */ jsx5(Close2, { children: /* @__PURE__ */ jsx5(X, { size: 20 }) }),
+      /* @__PURE__ */ jsx5(Title2, { children: title }),
+      /* @__PURE__ */ jsx5(Description2, { children: description })
+    ] }),
+    /* @__PURE__ */ jsx5(Toast2.Viewport, {})
+  ] });
+}
+ToastMessage.displayName = "Toast";
+
+// src/components/TooltipMessage/index.tsx
+import * as Tooltip2 from "@radix-ui/react-tooltip";
+
+// src/components/TooltipMessage/styles.ts
+import * as Tooltip from "@radix-ui/react-tooltip";
+var Content2 = styled(Tooltip.Content, {
+  padding: "$3 $4",
+  borderRadius: 5,
+  backgroundColor: "$gray900",
+  boxShadow: "box-shadow: 4px 16px 24px 0px rgba(0, 0, 0, 0.25)",
+  fontFamily: "$default",
+  fontSize: "$sm",
+  fontWeight: "$medium",
+  lineHeight: "$short",
+  color: "$gray100"
+});
+
+// src/components/TooltipMessage/index.tsx
+import { jsx as jsx6, jsxs as jsxs5 } from "react/jsx-runtime";
+function TooltipMessage({ content }) {
+  return /* @__PURE__ */ jsx6(Tooltip2.Provider, { children: /* @__PURE__ */ jsxs5(Tooltip2.Root, { children: [
+    /* @__PURE__ */ jsx6(Tooltip2.Trigger, { asChild: true, children: /* @__PURE__ */ jsx6(Button, { children: "Mouseover to activate" }) }),
+    /* @__PURE__ */ jsx6(Tooltip2.Portal, { children: /* @__PURE__ */ jsxs5(Content2, { children: [
+      /* @__PURE__ */ jsx6(Tooltip2.Arrow, {}),
+      content
+    ] }) })
+  ] }) });
+}
+TooltipMessage.displayName = "Tooltip";
 export {
   Avatar2 as Avatar,
   Box,
@@ -525,6 +613,8 @@ export {
   Text,
   TextArea,
   TextInput,
+  ToastMessage,
+  TooltipMessage,
   config,
   createTheme,
   css,

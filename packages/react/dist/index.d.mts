@@ -235,6 +235,7 @@ declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", 
         ignite500: string;
         ignite700: string;
         ignite900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
@@ -443,6 +444,7 @@ declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h
         ignite500: string;
         ignite700: string;
         ignite900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
@@ -1278,6 +1280,7 @@ declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"
         ignite500: string;
         ignite700: string;
         ignite900: string;
+        test: string;
     };
     fontSizes: {
         xxs: string;
@@ -1682,6 +1685,23 @@ interface MultiStepProps {
 }
 declare function MultiStep({ size, currentStep }: MultiStepProps): react_jsx_runtime.JSX.Element;
 declare namespace MultiStep {
+    var displayName: string;
+}
+
+interface ToastMessageProps {
+    title: string;
+    description: string;
+}
+declare function ToastMessage({ title, description }: ToastMessageProps): react_jsx_runtime.JSX.Element;
+declare namespace ToastMessage {
+    var displayName: string;
+}
+
+interface TooltipMessageProps {
+    content: string;
+}
+declare function TooltipMessage({ content }: TooltipMessageProps): react_jsx_runtime.JSX.Element;
+declare namespace TooltipMessage {
     var displayName: string;
 }
 
@@ -3387,4 +3407,4 @@ declare const config: {
     utils: {};
 };
 
-export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps, config, createTheme, css, getCssText, globalCss, keyframes, styled, theme };
+export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps, ToastMessage, ToastMessageProps, TooltipMessage, TooltipMessageProps, config, createTheme, css, getCssText, globalCss, keyframes, styled, theme };
